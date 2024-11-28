@@ -1,0 +1,23 @@
+region              = "eu-central-1"
+environment         = "prod"
+vpc_cidr            = "10.0.0.0/16"
+private_subnet_cidrs = [ "10.0.1.0/24", "10.0.2.0/24" ]
+public_subnet_cidrs = [ "10.0.4.0/24", "10.0.3.0/24" ]
+allowed_ports       = [80, 443]
+allowed_ip_ranges   = ["0.0.0.0/0"]
+domain_name         = "azopat.cm"
+acm_validation_method = "DNS"
+dolibarr_image      = "tuxgasy/dolibarr:latest"
+mysql_version       = "8.0"
+instance_class      = "db.t3.medium"
+allocated_storage   = 20
+max_allocated_storage = 100
+db_name             = "dolibarr"
+db_username         = "dolibarr"
+db_password         = "securepas"
+dolibarr_admin_password = "superadminpass"
+availability_zones = [ "eu-central-1a", "eu-central-1b" ]
+s3_bucket_name     = "dolibarr-files"
+target_group_name  = "dolibarr-ecs-tgr"
+hosted_zone_id     = "Z0363102U3C1QGXEYDHT"
+
